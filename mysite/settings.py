@@ -83,23 +83,22 @@ DATABASES = {
      #   'ENGINE': 'django.db.backends.sqlite3',
       #  'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     #}
+    # 'default': {
+    #    'ENGINE': 'django.db.backends.postgresql',
+    #    'NAME': 'jobdb',
+    #    'USER':'postgres',
+    #    'PASSWORD':'admin1234',
+    #    'HOST':'localhost',
+    #    'PORT':'5432',
+    # }
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'd6mfp405su3152',
-        'USER':'kvjwfrqrimqqld',
-        'PASSWORD':'16fc92a772c1ef656a2df5911f2820ca7469a1b4470f9edc61db8c67f1cc14c0',
-        'HOST':'ec2-54-225-121-235.compute-1.amazonaws.com',
-        'PORT':'5432',
-    }
-
-    #'default': {
-     #   'ENGINE': 'django.db.backends.postgresql',
-      #  'NAME': 'jobdb',
-      #  'USER':'postgres',
-      #  'PASSWORD':'admin1234',
-      #  'HOST':'localhost',
-      #  'PORT':'5432',
-    #}
+       'ENGINE': 'django.db.backends.postgresql',
+       'NAME': 'd6mfp405su3152',
+       'USER':'kvjwfrqrimqqld',
+       'PASSWORD':'16fc92a772c1ef656a2df5911f2820ca7469a1b4470f9edc61db8c67f1cc14c0',
+       'HOST':'ec2-54-225-121-235.compute-1.amazonaws.com',
+       'PORT':'5432',
+    } 
 }
 
 
@@ -143,7 +142,11 @@ STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 
-MEDIA_ROOT = BASE_DIR
+if DEBUG:
+    MEDIA_ROOT = BASE_DIR
+else:
+    MEDIA_ROOT = os.path.join(BASE_DIR, 'media')   
+    
 MEDIA_URL = '/media/'
 
 django_heroku.settings(locals())
