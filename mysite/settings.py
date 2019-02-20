@@ -91,6 +91,15 @@ DATABASES = {
         'HOST':'ec2-54-225-121-235.compute-1.amazonaws.com',
         'PORT':'5432',
     }
+
+    #'default': {
+     #   'ENGINE': 'django.db.backends.postgresql',
+      #  'NAME': 'jobdb',
+      #  'USER':'postgres',
+      #  'PASSWORD':'admin1234',
+      #  'HOST':'localhost',
+      #  'PORT':'5432',
+    #}
 }
 
 
