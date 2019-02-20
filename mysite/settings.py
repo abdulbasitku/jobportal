@@ -26,7 +26,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'vb&3kdg-n9mbthcdg4^nw6b3)!=%49h1o+x=82=pt$o=_*i+99')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['cspp.herokuapp.com']
 
@@ -83,22 +83,22 @@ DATABASES = {
      #   'ENGINE': 'django.db.backends.sqlite3',
       #  'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     #}
-    # 'default': {
-    #    'ENGINE': 'django.db.backends.postgresql',
-    #    'NAME': 'jobdb',
-    #    'USER':'postgres',
-    #    'PASSWORD':'admin1234',
-    #    'HOST':'localhost',
-    #    'PORT':'5432',
-    # }
     'default': {
        'ENGINE': 'django.db.backends.postgresql',
-       'NAME': 'd6mfp405su3152',
-       'USER':'kvjwfrqrimqqld',
-       'PASSWORD':'16fc92a772c1ef656a2df5911f2820ca7469a1b4470f9edc61db8c67f1cc14c0',
-       'HOST':'ec2-54-225-121-235.compute-1.amazonaws.com',
+       'NAME': 'jobdb',
+       'USER':'postgres',
+       'PASSWORD':'admin1234',
+       'HOST':'localhost',
        'PORT':'5432',
-    } 
+    }
+    # 'default': {
+    #    'ENGINE': 'django.db.backends.postgresql',
+    #    'NAME': 'd6mfp405su3152',
+    #    'USER':'kvjwfrqrimqqld',
+    #    'PASSWORD':'16fc92a772c1ef656a2df5911f2820ca7469a1b4470f9edc61db8c67f1cc14c0',
+    #    'HOST':'ec2-54-225-121-235.compute-1.amazonaws.com',
+    #    'PORT':'5432',
+    # } 
 }
 
 
