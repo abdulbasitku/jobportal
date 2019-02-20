@@ -85,10 +85,10 @@ DATABASES = {
     #}
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'jobdb',
-        'USER':'postgres',
-        'PASSWORD':'admin1234',
-        'HOST':'localhost',
+        'NAME': 'd6mfp405su3152',
+        'USER':'kvjwfrqrimqqld',
+        'PASSWORD':'16fc92a772c1ef656a2df5911f2820ca7469a1b4470f9edc61db8c67f1cc14c0',
+        'HOST':'ec2-54-225-121-235.compute-1.amazonaws.com',
         'PORT':'5432',
     }
 }
