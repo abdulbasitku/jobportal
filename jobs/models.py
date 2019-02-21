@@ -21,11 +21,17 @@ class Company(models.Model):
     def __str__(self):
         return self.name
 
+class Education(models.Model):
+    name = models.CharField(max_length=255)
+
+    def __str__(self):
+        return self.name        
+
 class Job(models.Model):
 
     job_title = models.CharField(max_length=250)
     job_text = models.TextField()
-    #company = models.CharField(max_length=250,null=True,blank=True)
+    min_education = models.ForeignKey(Education, on_delete=models.SET_NULL, null=True,blank=True) 
     company = models.ForeignKey(Company, on_delete=models.SET_NULL, null=True,blank=True) 
     positions = models.IntegerField(null=True,blank=True)
     min_experience = models.IntegerField(null=True,blank=True) 
@@ -36,7 +42,7 @@ class Job(models.Model):
     posting_date = models.DateTimeField('Posting Date')
     last_date_apply = models.DateTimeField(null=True,blank=True)
     #image = models.ImageField(upload_to='images/', null=True,blank=True)
-    image_url = models.URLField(null=True,blank=True)
+    image_url = models.URLField(default="#", null=True,blank=True)
 
 
     def __str__(self):
