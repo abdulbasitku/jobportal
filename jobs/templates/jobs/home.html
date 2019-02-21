@@ -24,16 +24,31 @@
             {% for job in all_jobs.all %}
 
             <div class="col-md-4">
-              <a href="">
+                <a href="{% url 'detail' job.id %}">
               <div class="card mb-4 box-shadow">
                 <!-- <img class="card-img-top" src="{{ job.image.url }}" height="300px"> -->
                 <img class="card-img-top" src="{% static 'Opp.jpg' %}" height="300px"> 
                 <div class="card-body">
-                  <p class="card-text">{{ job.job_title }}</p>
+                  <p class="card-text">{{ job.job_title }} position</p>                  
+                  <p class="card-text">At {{ job.company }}</p>
                 </div>
               </div>
               </a>
             </div>
+
+            <!-- <div class="container">
+                <div class="row">
+                  <div class="col-sm">
+                    One of three columns
+                  </div>
+                  <div class="col-sm">
+                    One of three columns
+                  </div>
+                  <div class="col-sm">
+                    One of three columns
+                  </div>
+                </div>
+              </div> -->
 
             {% endfor %}
           </div>

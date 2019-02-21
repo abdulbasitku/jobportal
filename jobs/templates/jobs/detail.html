@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+{% load static %}
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../../../favicon.ico">
+
+    <title>CS Professional Pakistan</title>
+
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+  </head>
+
+  <body>
+
+    <main role="main">
+
+      <section class="jumbotron text-center">
+        <div class="container">
+          <h1 class="jumbotron-heading">{{ job.job_title }}</h1>
+          <img src="{% static 'Opp.jpg' %}" height="250" />
+          <!-- <p>
+            <a href="{% url 'home' %}" class="btn btn-primary my-2">Back</a>
+          </p> -->
+          <hr class="my-4">
+          
+          <p class="text-left">Company: {{ job.company}}</p>
+          <p class="text-left">Positions: {{ job.positions}}</p>
+          <p class="text-left">Min Experience: {{ job.min_experience}}</p>
+          <p class="text-left">Max Experience: {{ job.max_experience}}</p>
+          <p class="text-left">Email Address: {{ job.email_address}}</p>
+          <p class="text-left">Link: <a href='{{ job.link_to_apply}}'> To Apply </a> </p>
+          <p class="text-left">Location: {{ job.city}}</p>
+          <p class="text-left">Last Date: {{ job.last_date_apply}}</p>
+          <p class="text-left">Summary: </p>
+          <p class="text-left">{{ job.job_text | linebreaks }}</p>
+
+        </div>
+      </section>
+
+    </main>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="{% static 'js/bootstrap.js' %}" ></script>
+    <script src="{% static 'jquery-3.3.1.min.js' %}" ></script>
+  </body>
+</html>
