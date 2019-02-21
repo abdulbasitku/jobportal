@@ -35,7 +35,7 @@ class Job(models.Model):
     city = models.ForeignKey(City, on_delete=models.SET_NULL, null=True,blank=True) 
     posting_date = models.DateTimeField('Posting Date')
     last_date_apply = models.DateTimeField(null=True,blank=True)
-    image = models.ImageField(upload_to='images/', null=True,blank=True)
+    #image = models.ImageField(upload_to='images/', null=True,blank=True)
     image_url = models.URLField(null=True,blank=True)
 
 

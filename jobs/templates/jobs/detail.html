@@ -20,7 +20,8 @@
       <section class="jumbotron text-center">
         <div class="container">
           <h1 class="jumbotron-heading">{{ job.job_title }}</h1>
-          <img src="{% static 'Opp.jpg' %}" height="250" />
+          <img src='{{job.image_url}}' height="250" />
+          <!-- <img src="{% static 'Opp.jpg' %}" height="250" /> -->
           <!-- <p>
             <a href="{% url 'home' %}" class="btn btn-primary my-2">Back</a>
           </p> -->
