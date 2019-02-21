@@ -20,7 +20,7 @@
       <section class="jumbotron text-center">
         <div class="container">
           <h1 class="jumbotron-heading">{{ job.job_title }}</h1>
-          <img src='{{job.image_url}}' height="250" />
+          <img src='{{job.image_url}}' height="300px" width="300px" />
           <!-- <img src="{% static 'Opp.jpg' %}" height="250" /> -->
           <!-- <p>
             <a href="{% url 'home' %}" class="btn btn-primary my-2">Back</a>
@@ -31,8 +31,8 @@
           <p class="text-left">Positions: {{ job.positions}}</p>
           <p class="text-left">Min Experience: {{ job.min_experience}}</p>
           <p class="text-left">Max Experience: {{ job.max_experience}}</p>
-          <p class="text-left">Email Address: {{ job.email_address}}</p>
-          <p class="text-left">Link: <a href='{{ job.link_to_apply}}'> To Apply </a> </p>
+          <p class="text-left">Email Id : <a href='mailto: {{ job.email_address}}'> Send Resume/CV </a></p>
+          <p class="text-left">Detail/Apply: <a href='{{ job.link_to_apply}}'> {{ job.company}} </a> </p>
           <p class="text-left">Location: {{ job.city}}</p>
           <p class="text-left">Last Date: {{ job.last_date_apply}}</p>
           <p class="text-left">Summary: </p>
